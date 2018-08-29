@@ -1,6 +1,8 @@
 # HL7 v2.7
 ## Tables
 
+> *Method DRG - Diagnosis Related Groups
+
 1. **0155** - Accept/Application Acknowledgment Conditions
 
     | Value | Value |
@@ -969,14 +971,20 @@
 1. **0761** - DRG Procedure Determination Status
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:-----------------------:|
+    | 0	    | Valid code              |
+    | 1	    | Invalid code            |
+    | 2	    | Not used                |
+    | 3	    | Invalid for this gender |
+    | 4	    | Invalid for this age    |
 
 1. **0763** - DRG Procedure Relevance
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:--------------------------------------------------------------:|
+    | 0	    | Neither operation relevant nor non-operation relevant procedure|
+    | 1	    | Operation relevant procedure                                   |
+    | 2	    | Non-operation relevant procedure                               |
 
 1. **0742** - DRG Status Financial Calculation
 
@@ -2001,8 +2009,16 @@
 1. **0004** - Patient Class
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:-----------------:|
+    | B	    | Obstetrics        |
+    | C	    | Commercial Account|
+    | E	    | Emergency         |
+    | I	    | Inpatient         |
+    | N	    | Not Applicable    |
+    | O	    | Outpatient        |
+    | P	    | Preadmit          |
+    | R	    | Recurring patient |
+    | U	    | Unknown           |
 
 1. **0434** - Patient Condition Code
 
@@ -2253,20 +2269,29 @@
 1. **0416** - Procedure DRG Type
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:-----------------:|
+    | 1	    | 1st non-Operative |
+    | 2	    | 2nd non-Operative |
+    | 3	    | Major Operative   |
+    | 4	    | 2nd Operative     |
+    | 5	    | 3rd Operative     |
 
 1. **0230** - Procedure Functional Type
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:---------------------------------------------------------------------:|
+    | A     | Anesthesia                                                            |
+    | D     | Diagnostic procedure                                                  |
+    | I     | Invasive procedure not classified elsewhere (e.g., IV, catheter, etc.)|
+    | P     | Procedure for treatment (therapeutic, including operations)           |
 
 1. **0418** - Procedure Priority
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:------------------------------:|
+    | 0	    | the admitting procedure        |
+    | 1	    | the primary procedure          |
+    | 2	    | for ranked secondary procedures|
 
 1. **0562** - Processing Consideration Codes
 
@@ -2697,8 +2722,11 @@
 1. **0206** - Segment action code
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:----------:|
+    | A	    | Add/Insert |
+    | D	    | Delete     |
+    | U	    | Update     |
+    | X	    | No Change  |
 
 1. **0391** - Segment Group
 
@@ -3045,8 +3073,20 @@
 1. **0417** - Tissue Type Code
 
     | Value | Value |
-    |:-----:|:-----:|
-    |       |       |
+    |:-----:|:----------------------------:|
+    | 0     |   No tissue expected         |
+    | 1     |   Insufficient Tissue        |
+    | 2     |   Not abnormal               |
+    | 3     |   Abnormal-not categorized   |
+    | 4     |   Mechanical abnormal        |
+    | 5     |   Growth alteration          |
+    | 6     |   Degeneration & necrosis    |
+    | 7     |   Non-acute inflammation     |
+    | 8     |   Non-malignant neoplasm     |
+    | 9     |   Malignant neoplasm         |
+    | B     |   Basal cell carcinoma       |
+    | C     |   Carcinoma-unspecified type |
+    | G     |   Additional tissue required |
 
 1. **0472** - TQ Conjunction ID
 
